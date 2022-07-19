@@ -11,7 +11,7 @@ const init = async () => {
         const dirPath = path.join(__dirname, '..', `/${fn}`);
         const rawData = fs.readFileSync(dirPath);
 
-        for (let url of rawData) {
+        for (let url of JSON.parse(rawData)) {
             // TODO: Complete URL Validation
             log.info(url);
         }
