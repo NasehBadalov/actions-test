@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "json-validation": "node workflow_scripts/jsonValidation.js",
+    "url-validation": "node workflow_scripts/urlValidation.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/NasehBadalov/actions-test/issues"
   },
-  "homepage": "https://github.com/NasehBadalov/actions-test#readme"
+  "homepage": "https://github.com/NasehBadalov/actions-test#readme",
+  "dependencies": {
+    "glob": "^8.0.3"
+  }
 }
