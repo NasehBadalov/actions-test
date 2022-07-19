@@ -12,7 +12,7 @@ const init = async () => {
         const rawData = fs.readFileSync(dirPath);
 
         // TODO: Complete URL Validation
-        log.info(`Count of URLs: ${JSON.parse(rawData).length}`);
+        log.info(`Count of URLs in ${fn}: ${JSON.parse(rawData).length}`);
     }
 }
 
