@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const {getJsonFileNames} = require("./helpers/getJsonFileNames");
-const {isValidJSON} = require("./helpers/isValidJSON");
 const {log} = require("./helpers/log");
 
 const init = async () => {
