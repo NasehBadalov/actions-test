@@ -1,16 +1,17 @@
-const log = (value) => console.log("\x1b[34m", value);
+const Log = {
+    info: (value) => console.info("\x1b[34m", value),
+    error: (value) => console.error("\x1b[31m", value),
+};
 
 const isValidJSON = (str) => {
-    try{
+    try {
         JSON.parse(str);
     } catch (e) {
         // Has syntax error so we log a message and exit with an error code
-        console.error("JSON IS NOT VALID!");
-        process.exit(1);
+        return false;
     }
-    console.log("ALL GOOD WITH THE JSON FILE!");
 
-    process.exit(0);
+    return true;
 }
 
 
@@ -19,4 +20,12 @@ const isValidJSON = (str) => {
 const fs = require('fs');
 
 let rawData = fs.readFileSync('./test.json');
-isValidJSON(rawData);
+
+
+if (isValidJSON(rawData)) {
+    Log.info('JSON file is valid.');
+    process.exit(0);
+} else {
+    Log.error('Invalid JSON file.');
+    process.exit(1);
+}
