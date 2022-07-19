@@ -1,16 +1,15 @@
 name: JSON check
 
-on:
-  pull_request:
-    paths:
-      - '**.json'
+on: pull_request
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: json-syntax-check
-        uses: limitusus/json-syntax-check@v1
+      - name: Json Validity
+        uses: actions/setup-node@v2
         with:
-          pattern: "\\.json$"
+          node-version: 14.x
+      - run: npm ci
+      - run: npm run test
