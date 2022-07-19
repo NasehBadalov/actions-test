@@ -1,6 +1,6 @@
-export const log = (value) => console.log("\x1b[34m", value);
+const log = (value) => console.log("\x1b[34m", value);
 
-export const isValidJSON = (str) => {
+const isValidJSON = (str) => {
     try{
         JSON.parse(str);
     } catch (e) {
