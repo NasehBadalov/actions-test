@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "json-validation": "node workflow_scripts/jsonValidation.js"
+    "json-validation": "node workflow_scripts/jsonValidation.js",
+    "url-validation": "node workflow_scripts/urlValidation.js"
   },
   "repository": {
     "type": "git",
