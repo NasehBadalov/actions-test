@@ -12,7 +12,7 @@ const init = async () => {
         const rawData = fs.readFileSync(dirPath);
 
         if (isValidJSON(rawData)) {
-            log.info(`[${fn}] - JSON file is valid.`);
+            log.info(`[${fn}] - JSON file is valid.....`);
         } else {
             log.error(`[${fn}] - Invalid JSON file.`);
             process.exit(1);
